@@ -16,3 +16,7 @@ CREATE TABLE graduates(
 		Points INTEGER,
 		Graduation TEXT
 );
+
+SELECT employees.Name, employees.Company, companies.date FROM employees Inner join companies ON employees.Company=companies.Name;
+SELECT employees.Name FROM employees Inner join companies ON employees.Company=companies.Name and companies.Date < 2000;
+SELECT companies.Name FROM companies Inner join employees ON employees.Company=companies.Name and employees.Role='Graphic Designer';
